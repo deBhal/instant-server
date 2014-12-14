@@ -3,30 +3,18 @@
 Spawn a http server in the current directory that instantly notifies
 all connected devices as soon as a HTML, CSS, or JavaScript file is modified.
 
-![screenshot](http://fgnass.github.io/images/instant.gif)
-
-### Installation
+See https://github.com/fgnass/instant-server for all the awesome.  This fork is purely to strip out linger because I want to run the instant server in the background, and linger makes that problematic.
 
 ```
-$ npm install -g instant-server
+git clone git@github.com:deBhal/instant-server.git
+cd instant-server
+npm link
 ```
 
-### Usage
-
+This'll give you the server with:
 ```
-$ instant <port>
+instant
 ```
-
-If the port is omitted a free random port is used and
-`http://localhost:<random-port>` is opened in the default browser.
-
-### Features
-
-* Supports all major browsers including Android 2 and IE6
-* No browser plugin required
-* No need to add extra script tags to your HTML pages
-* Incremental CSS updates (no page reload)
-* Uses the [instant middleware](https://npmjs.org/package/instant) under the hood
 
 ## License
 
