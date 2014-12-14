@@ -2,7 +2,6 @@
 
 var instant = require('instant')
   , connect = require('connect')
-  , linger = require('linger')
   , open = require('open')
 
 var port = process.argv[2]
@@ -15,5 +14,5 @@ app
 .listen(port, function() {
   var listening = this.address().port
   if (!port) open('http://localhost:'+listening)
-  linger('listening on port ' + listening + ' and waiting for changes')
+  console.log('listening on port ' + listening + ' and waiting for changes')
 })
